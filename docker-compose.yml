@@ -1,0 +1,1 @@
+version: '3'\nservices:\n  belote:\n    build: .\n    ports:\n      - '3001:3001'\n    volumes:\n      - .:/app\n    environment:\n      - NODE_ENV=production\n

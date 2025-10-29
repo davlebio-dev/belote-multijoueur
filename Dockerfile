@@ -1,0 +1,1 @@
+FROM node:18\nWORKDIR /app\nCOPY package*.json ./\nRUN npm install\nCOPY . .\nWORKDIR /app/client\nRUN npm install && npm run build\nWORKDIR /app\nCMD [\"npm\", \"start\"]\nEXPOSE 3001\n
